@@ -16,6 +16,8 @@ class agent;
             agt2drv.put(tr);
             agt2scb.put(tr);
             -> agent_done;
+            display("[agt] put done")
+            @(drv_done);
         end
     endtask
 endclass
