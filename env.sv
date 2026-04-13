@@ -30,12 +30,19 @@ class environment;
         scb2chk = new();
 
         // 2. Khởi tạo các blocks (components)
-        gen = new(gen2agt, agent_done);
-        agt = new(gen2agt, agt2drv, agt2scb, agent_done, drv_done);
-        drv = new(agt2drv, drv_done, inf);
+        gen = new(gen2agt);
+        agt = new(gen2agt, agt2drv, agt2scb);
+        drv = new(agt2drv, inf);
         scb = new(agt2scb, scb2chk);
         mon = new(mon2chk, inf);
         chk = new(scb2chk, mon2chk);
+
+        //Ket noi cac event
+        gen.agent_done = agent_done;
+        agt.agent_done = agent_done;
+        agt.drv_done = drv_done;
+        drv.drv_done = drv_done;
+        
     endfunction
 
     task run();

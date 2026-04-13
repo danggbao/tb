@@ -2,9 +2,8 @@ class driver;
     mailbox agt2drv;
     event drv_done;
     virtual intf inf;
-    function new(mailbox agt2drv, event drv_done, virtual intf inf);
+    function new(mailbox agt2drv, virtual intf inf);
         this.agt2drv = agt2drv;
-        this.drv_done = drv_done;
         this.inf = inf;
     endfunction
     task run();

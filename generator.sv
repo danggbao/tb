@@ -3,9 +3,8 @@ class generator;
     
     event agent_done;
     int repeat_count = 20;
-    function new(mailbox gen2agt, event ev);
+    function new(mailbox gen2agt);
         this.gen2agt = gen2agt;
-        this.agent_done = ev;
     endfunction
     task run();
         transaction tr;
