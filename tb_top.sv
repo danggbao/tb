@@ -1,12 +1,4 @@
-`include "transaction.sv"
-`include "generator.sv"
-`include "agt.sv"
-`include "drv.sv"
-`include "monitor.sv"
-`include "scb.sv"
-`include "checker.sv"
-`include "env.sv"
-
+`timescale 1ps/1ps
 module tb_top;
     // Khai báo clock và reset
     bit clk;
